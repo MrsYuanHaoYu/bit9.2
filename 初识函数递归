@@ -1,0 +1,23 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+//int main()
+//{
+//	printf("%d ", printf("%d ", printf("%d ",43)));//为什么是4332，按理说是4321，printf函数的返回值是字符个数
+//	return 0;
+//}
+//函数递归
+void ret(int num)
+{
+	if (num > 9)
+	{
+		ret(num / 10);
+	}
+	printf("%d ", num % 10);
+}
+int main()
+{
+	unsigned int num = 0;//错误的写法int unsigned num = 0;
+	scanf("%d",&num);
+	ret(num);
+	return 0;
+}
